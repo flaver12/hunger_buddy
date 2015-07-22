@@ -19,14 +19,15 @@
  //All functions that has to deal with eat
  class Eat{
 	 
-	 class calcHunger{file="\jtog_hunger_buddy_scripts\functions\eat\calcHunger.sqf";};
-	 class getHunger{file="\jtog_hunger_buddy_scripts\functions\eat\getHunger.sqf";};
+	class calcHunger{file="\jtog_hunger_buddy_scripts\functions\eat\calcHunger.sqf";};
+	class getHunger{file="\jtog_hunger_buddy_scripts\functions\eat\getHunger.sqf";};
 	 
  };
  
   //All functions that has to deal with drink
  class Drink{
 	 
-	class calcDrink{file="\jtog_hunger_buddy_scripts\functions\drink\calcDrink.sqf"};  
+	class calcDrink{file="\jtog_hunger_buddy_scripts\functions\drink\calcDrink.sqf"};
+	class getDrink{file="\jtog_hunger_buddy_scripts\functions\drink\getDrink.sqf";};	
 	 
  };

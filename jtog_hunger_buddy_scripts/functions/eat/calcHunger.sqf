@@ -35,5 +35,8 @@
  //Calc new hunger
  _hunger = _hunger - _lost;
  
- //Set the new hunger
-player setVariable["jtog_hb_hunger", round _hunger];
+ if(_hunger > 0) then {
+	//Set the new hunger
+	player setVariable["jtog_hb_hunger", round _hunger];
+ };
+

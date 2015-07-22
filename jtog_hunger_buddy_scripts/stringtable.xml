@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ArmA3">
+    <Package name="jtog_hunger_buddy_scripts">
+        <Container name="menu">
+            <Key ID="jtog_hunger_buddy_scripts_menu_CheckHunger">
+                <Original>Check your hunger</Original>
+                <English>Check your hunger</English>
+                <German>Check deinen Hunger</German>
+            </Key>
+            <Key ID="jtog_hunger_buddy_scripts_menu_CheckDrink">
+                <English>Check your thirst</English>
+                <German>Check deinen Durst</German>
+                <Original>Check your thirst</Original>
+            </Key>
+        </Container>
+    </Package>
+</Project>

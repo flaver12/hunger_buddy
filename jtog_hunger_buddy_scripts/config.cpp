@@ -17,7 +17,7 @@
 		units[] = {};
 		requiredVersion = 0.60;
 		requiredAddons[] = {CBA_MAIN,"a3_modules_f","jtog_hunger_buddy_items"};
-		version 	= "0.0.4";
+		version 	= "0.0.1";
 		author[] 	= {"flaver"};
 		authorUrl 	= "https://github.com/flaver12";
 	};
@@ -86,8 +86,8 @@ class CfgVehicles {
 				subMenu[] = {"JTOG_HB", 1};
 				hotkey = "T";
 
-				class JTOG_HB_HUNGER {
-				  displayName = "check hunger";
+				class JTOG_HB_HUNGER_CHECK {
+				  displayName = "$STR_jtog_hunger_buddy_scripts_menu_CheckHunger";
 				  condition = "_player getVariable['jtog_hb_init', false]";
 				  statement = "[_player] call jtog_hunger_buddy_scripts_fnc_getHunger; ";
 				  icon = "AGM_Medical\UI\diagnose_ca.paa";
@@ -95,6 +95,15 @@ class CfgVehicles {
 				  enableInside = 1;
 				  priority = 1;
 				};
+				class JTOG_HB_DRINK_CHECK {
+				  displayName = "$STR_jtog_hunger_buddy_scripts_menu_CheckHunger";
+				  condition = "_player getVariable['jtog_hb_init', false]";
+				  statement = "[_player] call jtog_hunger_buddy_scripts_fnc_getDrink; ";
+				  icon = "AGM_Medical\UI\diagnose_ca.paa";
+				  showDisabled = 0;
+				  enableInside = 1;
+				  priority = 1;
+				}
 				
 			};
 			
