@@ -3,12 +3,12 @@
  * Basic config for the mode
  *
  * Arguments: None
- * 
+ *
  * Return Value:
  * NONE
  *
  */
- 
+
 //Patches class
  class CfgPatches {
 
@@ -24,11 +24,6 @@
 
 };
 
-/*
-#include "defines.hpp";
-#include "RscTitles.hpp"
-*/
-
 //Define our own category
 class CfgFactionClasses {
 
@@ -43,9 +38,9 @@ class CfgFactionClasses {
 
 //Functions wrapper
 class CfgFunctions {
-	
+
 	class jtog_hunger_buddy_scripts {
-		#include <\jtog_hunger_buddy_scripts\CfgFunctions.cpp>
+		#include <CfgFunctions.cpp>
 	};
 };
 
@@ -54,7 +49,7 @@ class CfgVehicles {
 
 	//Wrapper for base module
 	class Module_F;
-	
+
 	//Create a new module
 	class jtog_ModuleRBUSupport: Module_F {
 		author 		= "flaver";
@@ -67,15 +62,19 @@ class CfgVehicles {
 		class Arguments {};
 
 	};
-	
+
 	//Defines for agm
 	class Man;
 	class CAManBase: Man {
+
+		//Actions that you can make
 		class AGM_Actions {};
+
+		//Action for the soilder it self
 		class AGM_SelfActions {
 
 			class JTOG_HB {
-				
+
 				displayName = "Hunger Buddy";
 				condition = "_player getVariable['jtog_hb_init', false]";
 				statement = "";
@@ -87,7 +86,7 @@ class CfgVehicles {
 				hotkey = "T";
 
 				class JTOG_HB_HUNGER_CHECK {
-				  displayName = "$STR_jtog_hunger_buddy_scripts_menu_CheckHunger";
+				  displayName = $STR_jtog_hunger_buddy_scripts_menu_CheckHunger;
 				  condition = "_player getVariable['jtog_hb_init', false]";
 				  statement = "[_player] call jtog_hunger_buddy_scripts_fnc_getHunger; ";
 				  icon = "AGM_Medical\UI\diagnose_ca.paa";
@@ -96,17 +95,27 @@ class CfgVehicles {
 				  priority = 1;
 				};
 				class JTOG_HB_DRINK_CHECK {
-				  displayName = "$STR_jtog_hunger_buddy_scripts_menu_CheckHunger";
+				  displayName = $STR_jtog_hunger_buddy_scripts_menu_CheckDrink;
 				  condition = "_player getVariable['jtog_hb_init', false]";
 				  statement = "[_player] call jtog_hunger_buddy_scripts_fnc_getDrink; ";
 				  icon = "AGM_Medical\UI\diagnose_ca.paa";
 				  showDisabled = 0;
 				  enableInside = 1;
 				  priority = 1;
-				}
-				
+				};
+/*				class JTOG_HB_HUNGER_EAT {
+				  displayName = $STR_jtog_hunger_buddy_scripts_menu_Eat;
+				  condition = "_player getVariable['jtog_hb_init', false]";
+				  statement = "[_player] call jtog_hunger_buddy_scripts_fnc_eatFood; ";
+				  icon = "\a3\ui_f\data\IGUI\Cfg\Actions\take_ca.paa";
+				  showDisabled = 0;
+				  enableInside = 1;
+				  priority = 1;
+				};*/
 			};
-			
+
 		};
 	};
 };
+//Include menu
+#include "Menu_Config.hpp"

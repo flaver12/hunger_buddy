@@ -2,15 +2,20 @@
 <Project name="ArmA3">
     <Package name="jtog_hunger_buddy_scripts">
         <Container name="menu">
-            <Key ID="jtog_hunger_buddy_scripts_menu_CheckHunger">
-                <Original>Check your hunger</Original>
+            <Key ID="STR_jtog_hunger_buddy_scripts_menu_CheckHunger">
                 <English>Check your hunger</English>
                 <German>Check deinen Hunger</German>
+                <Original>Check your hunger</Original>
             </Key>
-            <Key ID="jtog_hunger_buddy_scripts_menu_CheckDrink">
+            <Key ID="STR_jtog_hunger_buddy_scripts_menu_CheckDrink">
                 <English>Check your thirst</English>
                 <German>Check deinen Durst</German>
                 <Original>Check your thirst</Original>
+            </Key>
+            <Key ID="STR_jtog_hunger_buddy_scripts_menu_Eat">
+                <English>Eat</English>
+                <German>Essen</German>
+                <Original>Eat</Original>
             </Key>
         </Container>
     </Package>

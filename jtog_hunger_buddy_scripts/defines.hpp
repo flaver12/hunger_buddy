@@ -1,3 +1,14 @@
+/*
+ * Author: flaver
+ * The own GUI defines
+ *
+ * Arguments: None
+ *
+ * Return Value:
+ * NONE
+ *
+ */
+
 #define CT_STATIC           0
 #define CT_BUTTON           1
 #define CT_EDIT             2
@@ -80,9 +91,17 @@
 #define MB_BUTTON_CANCEL  2
 #define MB_BUTTON_USER    4
 
+#define color_red { 1, 0, 0, 1 }
+#define color_black { 0, 0, 0, 1 }
 
-class RscText
-{
+//Load external classes
+
+ class RscText;
+ class RscButton;
+ class RscListBox;
+
+//Own RscText define
+class JtogRscText: RscText {
    access = 0;
    type = 0;
    idc = -1;
@@ -97,10 +116,11 @@ class RscText
    style = 0;
    shadow = 2;
    font = "puristaMedium";
-   SizeEx = 0.03921;
+   SizeEx = "0.08/ (getResolution select 5)";
 };
-class RscButton
-{
+
+
+class JtogRscButton: RscButton {
    access = 0;
    type = 1;
    text = "";
@@ -129,4 +149,44 @@ class RscButton
    offsetPressedX = 0.002;
    offsetPressedY = 0.002;
    borderSize = 0;
+};
+
+//Own RscListBox define
+class JtogRscListBox: RscListBox {
+   access = 0;
+   type = 5;
+   style = 0;
+   w = 0.4;
+   h = 0.4;
+   font = "TahomaB";
+   sizeEx = 0.04;
+   rowHeight = 0;
+   colorText[] = {1,1,1,1};
+   colorScrollbar[] = {1,1,1,1};
+   colorSelect[] = {0,0,0,1};
+   colorSelect2[] = {1,0.5,0,1};
+   colorSelectBackground[] = {0.6,0.6,0.6,1};
+   colorSelectBackground2[] = {0.2,0.2,0.2,1};
+   colorBackground[] = {0,0,0,1};
+   maxHistoryDelay = 1.0;
+   soundSelect[] = {"",0.1,1};
+   period = 1;
+   autoScrollSpeed = -1;
+   autoScrollDelay = 5;
+   autoScrollRewind = 0;
+   arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
+   arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
+   shadow = 0;
+
+   class ScrollBar;
+   class ListScrollBar: ScrollBar {
+      color[] = {1,1,1,0.6};
+      colorActive[] = {1,1,1,1};
+      colorDisabled[] = {1,1,1,0.3};
+      thumb = "#(argb,8,8,3)color(1,1,1,1)";
+      arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
+      arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
+      border = "#(argb,8,8,3)color(1,1,1,1)";
+      shadow = 0;
+   };
 };
