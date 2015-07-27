@@ -13,7 +13,7 @@
  class General{
 
 	class initMod {file="\jtog_hunger_buddy_scripts\functions\init.sqf";};
-	class loadItems{file="\jtog_hunger_buddy_scripts\functions\loadItems.sqf"};
+	class loadItems{file="\jtog_hunger_buddy_scripts\functions\loadItems.sqf";};
 
  };
 
@@ -29,7 +29,7 @@
   //All functions that has to deal with drink
  class Drink{
 
-	class calcDrink{file="\jtog_hunger_buddy_scripts\functions\drink\calcDrink.sqf"};
+	class calcDrink{file="\jtog_hunger_buddy_scripts\functions\drink\calcDrink.sqf";};
 	class getDrink{file="\jtog_hunger_buddy_scripts\functions\drink\getDrink.sqf";};
 
  };

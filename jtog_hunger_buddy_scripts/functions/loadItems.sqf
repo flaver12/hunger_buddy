@@ -17,6 +17,9 @@ _lb = _this select 0;
 _player = _this select 1;
 _mod = _this select 2;
 
+
+systemChat "THIS IS A TEST!";
+
 if(_mod == "drink") then {
 
 

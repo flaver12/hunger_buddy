@@ -51,7 +51,7 @@ class CfgVehicles {
 	class Module_F;
 
 	//Create a new module
-	class jtog_ModuleRBUSupport: Module_F {
+	class jtog_Hunger_Buddy_Init: Module_F {
 		author 		= "flaver";
 		category  	= "HUNGERBUDDY";
 		displayName	= "Hunger Buddy init";
@@ -73,7 +73,7 @@ class CfgVehicles {
 		//Action for the soilder it self
 		class AGM_SelfActions {
 
-			class JTOG_HB {
+			class jtog_hunger_buddy {
 
 				displayName = "Hunger Buddy";
 				condition = "_player getVariable['jtog_hb_init', false]";
@@ -82,10 +82,10 @@ class CfgVehicles {
 				enableInside = 1;
 				icon = "AGM_Medical\UI\Medical_Icon_ca.paa";
 				priority = 6;
-				subMenu[] = {"JTOG_HB", 1};
+				subMenu[] = {"jtog_hunger_buddy", 1};
 				hotkey = "T";
 
-				class JTOG_HB_HUNGER_CHECK {
+				class jtog_hb_check_hunger {
 				  displayName = $STR_jtog_hunger_buddy_scripts_menu_CheckHunger;
 				  condition = "_player getVariable['jtog_hb_init', false]";
 				  statement = "[_player] call jtog_hunger_buddy_scripts_fnc_getHunger; ";
@@ -94,7 +94,7 @@ class CfgVehicles {
 				  enableInside = 1;
 				  priority = 1;
 				};
-				class JTOG_HB_DRINK_CHECK {
+				class jtog_hb_check_drink {
 				  displayName = $STR_jtog_hunger_buddy_scripts_menu_CheckDrink;
 				  condition = "_player getVariable['jtog_hb_init', false]";
 				  statement = "[_player] call jtog_hunger_buddy_scripts_fnc_getDrink; ";
@@ -103,7 +103,7 @@ class CfgVehicles {
 				  enableInside = 1;
 				  priority = 1;
 				};
-/*				class JTOG_HB_HUNGER_EAT {
+				class JTOG_HB_HUNGER_EAT {
 				  displayName = $STR_jtog_hunger_buddy_scripts_menu_Eat;
 				  condition = "_player getVariable['jtog_hb_init', false]";
 				  statement = "[_player] call jtog_hunger_buddy_scripts_fnc_eatFood; ";
@@ -111,7 +111,7 @@ class CfgVehicles {
 				  showDisabled = 0;
 				  enableInside = 1;
 				  priority = 1;
-				};*/
+				};
 			};
 
 		};
